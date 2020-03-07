@@ -29,6 +29,7 @@ body {
 .footer {
   flex: 0 0 auto;
   background-image: url(../images/bg-h-f.png);
+  background-repeat: repeat;
 }
 body {
   font-family: "Roboto", sans-serif;
@@ -59,6 +60,7 @@ header {
 .header__logo {
   width: 120px;
   margin-right: 20px;
+  margin-left: 10px;
   transition: all 0.5s;
 }
 .header__logo:hover {
@@ -123,9 +125,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    & h3:last-child {
-      margin-right: 65px;
-    }
     & a {
       display: block;
       width: 100%;
@@ -185,7 +184,16 @@ header {
     }
   }
 }
-
+.footer ul {
+  padding: 15px 0;
+  li {
+    margin: 5px 0;
+  }
+}
+.author{
+  text-align: center;
+  margin-bottom: 10px;
+}
 // MEDIA
 @media (max-width: 1050px) {
   .tabs {
@@ -199,8 +207,8 @@ header {
 }
 @media (max-width: 790px) {
   .header__wrapper {
-    & a {
-      display: none;
+    & .header__logo {
+      width: 100px;
     }
     & h1 {
       font-size: 26px;
@@ -227,7 +235,19 @@ header {
     height: 300px;
   }
 }
-@media (max-width: 630px) {
+@media (max-width: 635px) {
+  .header__wrapper {
+    & h1 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+    & .header__logo {
+      width: 80px;
+    }
+    & .header__inner span {
+      display: none;
+    }
+  }
   .tab_content__title,
   h3 {
     font-size: 16px;
@@ -239,10 +259,10 @@ header {
 @media (max-width: 535px) {
   .header__wrapper {
     & h1 {
-      font-size: 20px;
+      margin-bottom: 0px;
     }
     & h3 {
-      font-size: 14px;
+      display: none;;
     }
   }
 }
